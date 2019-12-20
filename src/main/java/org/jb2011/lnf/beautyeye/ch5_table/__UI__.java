@@ -100,7 +100,8 @@ public class __UI__
 		/* (non-Javadoc)
 		 * @see javax.swing.border.AbstractBorder#paintBorder(java.awt.Component, java.awt.Graphics, int, int, int, int)
 		 */
-		public void paintBorder(Component c, Graphics g, int x, int y, int w, int h) 
+		@Override
+		public void paintBorder(Component c, Graphics g, int x, int y, int w, int h)
 		{
 			g.translate( x, y );
 
@@ -127,7 +128,8 @@ public class __UI__
 		/* (non-Javadoc)
 		 * @see javax.swing.border.AbstractBorder#getBorderInsets(java.awt.Component)
 		 */
-		public Insets getBorderInsets( Component c ) 
+		@Override
+		public Insets getBorderInsets(Component c )
 		{
 			return editorBorderInsets;
 		}

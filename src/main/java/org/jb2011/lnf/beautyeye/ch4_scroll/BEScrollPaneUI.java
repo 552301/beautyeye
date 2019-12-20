@@ -46,7 +46,8 @@ public class BEScrollPaneUI extends BasicScrollPaneUI
     /* (non-Javadoc)
      * @see javax.swing.plaf.basic.BasicScrollPaneUI#installDefaults(javax.swing.JScrollPane)
      */
-    protected void installDefaults(JScrollPane scrollpane) 
+    @Override
+    protected void installDefaults(JScrollPane scrollpane)
     {
     	super.installDefaults(scrollpane);
     	

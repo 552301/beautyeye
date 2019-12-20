@@ -34,7 +34,8 @@ class FocusCellHighlightBorder extends AbstractBorder
 	/* (non-Javadoc)
 	 * @see javax.swing.border.AbstractBorder#getBorderInsets(java.awt.Component)
 	 */
-	public Insets getBorderInsets(Component c)       
+	@Override
+	public Insets getBorderInsets(Component c)
 	{
 //		return new Insets(0,3,0,1);
 		return new Insets(2,2,2,2); // @since 3.5
@@ -43,7 +44,8 @@ class FocusCellHighlightBorder extends AbstractBorder
 	/* (non-Javadoc)
 	 * @see javax.swing.border.AbstractBorder#getBorderInsets(java.awt.Component, java.awt.Insets)
 	 */
-	public Insets getBorderInsets(Component c, Insets insets) 
+	@Override
+	public Insets getBorderInsets(Component c, Insets insets)
 	{
 		return getBorderInsets(c);
 	}
@@ -51,6 +53,7 @@ class FocusCellHighlightBorder extends AbstractBorder
 	/* (non-Javadoc)
 	 * @see javax.swing.border.AbstractBorder#paintBorder(java.awt.Component, java.awt.Graphics, int, int, int, int)
 	 */
+	@Override
 	public void paintBorder(Component c, Graphics g, int x, int y, int width, int height)
 	{
 		//* old impl

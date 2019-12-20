@@ -1,0 +1,4 @@
+/target/
+!/.gitignore
+!/beautyeye.iml
+!/.idea/
