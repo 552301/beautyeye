@@ -77,7 +77,8 @@ public class BEPasswordFieldUI extends BasicPasswordFieldUI implements BgSwitcha
      *
      * @param g the graphics context
      */
-    protected void paintBackground(Graphics g) 
+    @Override
+    protected void paintBackground(Graphics g)
     {
     	//先调用父类方法把背景刷新下（比如本UI里使用的大圆角NP图如不先刷新背景则会因上下拉动滚动条
     	//而致4个圆角位置得不到刷新，从而影响视觉效果（边角有前面的遗留），置于透明边角不被透明像素填
@@ -97,6 +98,7 @@ public class BEPasswordFieldUI extends BasicPasswordFieldUI implements BgSwitcha
     /* (non-Javadoc)
      * @see org.jb2011.lnf.beautyeye.ch6_textcoms.__UI__.BgSwitchable#switchBgToNomal()
      */
+    @Override
     public void switchBgToNomal()
     {
     	this.bg = __Icon9Factory__.getInstance().getTextFieldBgNormal();
@@ -105,6 +107,7 @@ public class BEPasswordFieldUI extends BasicPasswordFieldUI implements BgSwitcha
     /* (non-Javadoc)
      * @see org.jb2011.lnf.beautyeye.ch6_textcoms.__UI__.BgSwitchable#switchBgToFocused()
      */
+    @Override
     public void switchBgToFocused()
     {
     	this.bg = __Icon9Factory__.getInstance().getTextFieldBgFocused();

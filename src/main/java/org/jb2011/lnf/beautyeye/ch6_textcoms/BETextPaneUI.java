@@ -79,6 +79,7 @@ public class BETextPaneUI extends BasicTextPaneUI implements BgSwitchable
      *
      * @param g the graphics context
      */
+    @Override
     protected void paintBackground(Graphics g)
     {
     	//先调用父类方法把背景刷新下（比如本UI里使用的大圆角NP图如不先刷新背景则会因上下拉动滚动条
@@ -99,6 +100,7 @@ public class BETextPaneUI extends BasicTextPaneUI implements BgSwitchable
     /* (non-Javadoc)
      * @see org.jb2011.lnf.beautyeye.ch6_textcoms.__UI__.BgSwitchable#switchBgToNomal()
      */
+    @Override
     public void switchBgToNomal()
     {
     	//默认是纯白色背景，因为JTextPane肯定是要放在JScrollPane中的，而ScrollPane也是有边框的
@@ -109,6 +111,7 @@ public class BETextPaneUI extends BasicTextPaneUI implements BgSwitchable
     /* (non-Javadoc)
      * @see org.jb2011.lnf.beautyeye.ch6_textcoms.__UI__.BgSwitchable#switchBgToFocused()
      */
+    @Override
     public void switchBgToFocused()
     {
     	this.bg = __Icon9Factory__.getInstance().getTextFieldBgFocused();
