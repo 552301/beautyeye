@@ -37,8 +37,9 @@ public class __Icon9Factory__ extends RawCache<NinePatch>
 	 */
 	public static __Icon9Factory__ getInstance()
 	{
-		if(instance==null)
+		if(instance==null) {
 			instance = new __Icon9Factory__();
+		}
 		return instance;
 	}
 	

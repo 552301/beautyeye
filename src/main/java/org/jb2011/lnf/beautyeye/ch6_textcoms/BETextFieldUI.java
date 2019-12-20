@@ -76,6 +76,7 @@ public class BETextFieldUI extends BasicTextFieldUI implements BgSwitchable
      *
      * @param g the graphics context
      */
+    @Override
     protected void paintBackground(Graphics g)
     {
 //    	Color bgc = editor.getBackground();
@@ -170,6 +171,7 @@ public class BETextFieldUI extends BasicTextFieldUI implements BgSwitchable
     /* (non-Javadoc)
      * @see org.jb2011.lnf.beautyeye.ch6_textcoms.__UI__.BgSwitchable#switchBgToNomal()
      */
+    @Override
     public void switchBgToNomal()
     {
     	this.bg = __Icon9Factory__.getInstance().getTextFieldBgNormal();
@@ -178,6 +180,7 @@ public class BETextFieldUI extends BasicTextFieldUI implements BgSwitchable
     /* (non-Javadoc)
      * @see org.jb2011.lnf.beautyeye.ch6_textcoms.__UI__.BgSwitchable#switchBgToFocused()
      */
+    @Override
     public void switchBgToFocused()
     {
     	this.bg = __Icon9Factory__.getInstance().getTextFieldBgFocused();
@@ -197,13 +200,15 @@ public class BETextFieldUI extends BasicTextFieldUI implements BgSwitchable
     public static void paintBg(Graphics g, int x, int y, int w , int h
     		, boolean enabled, NinePatch bg)
     {
-    	if(enabled)
-	    	//*** 重要说明：因使用的NinePatch图片作填充背景，所以后绪任何对JTextField设置
-	    	//*** 背景色将不会起效，因为背景是用图片填充而非传统方法绘制出来的
-	    	bg.draw((Graphics2D)g, x, y, w, h);
-    	else
-    		__Icon9Factory__.getInstance().getTextFieldBgDisabled()
-    			.draw((Graphics2D)g, x, y, w, h);
+    	if(enabled) {
+            //*** 重要说明：因使用的NinePatch图片作填充背景，所以后绪任何对JTextField设置
+            //*** 背景色将不会起效，因为背景是用图片填充而非传统方法绘制出来的
+            bg.draw((Graphics2D) g, x, y, w, h);
+        }
+    	else {
+            __Icon9Factory__.getInstance().getTextFieldBgDisabled()
+                    .draw((Graphics2D) g, x, y, w, h);
+        }
     }
     
     /**

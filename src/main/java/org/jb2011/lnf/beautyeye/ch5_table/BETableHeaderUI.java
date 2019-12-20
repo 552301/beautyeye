@@ -33,8 +33,6 @@ import org.jb2011.lnf.beautyeye.utils.ReflectHelper;
 
 import sun.swing.table.DefaultTableCellHeaderRenderer;
 
-//import sun.swing.table.DefaultTableCellHeaderRenderer;
-
 // TODO: Auto-generated Javadoc
 
 /**
@@ -45,10 +43,12 @@ import sun.swing.table.DefaultTableCellHeaderRenderer;
  * @author Jack Jiang(jb2011@163.com), 2011-03-28
  * @see com.sun.java.swing.plaf.windows.WindowsTableHeaderUI
  */
+/*
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 一些说明 Start
 //本类实现参考了JDK1.6_u18中的WindowsTableHeaderUI源码，本类中除了兼容性修改，其它源码基本不变！
 //另：本代码来自JDK自带src中，似乎代码不是最新的，存在一处不太明显的bug！
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 一些说明 END
+ */
 public class BETableHeaderUI extends BasicTableHeaderUI {
 
     /**
