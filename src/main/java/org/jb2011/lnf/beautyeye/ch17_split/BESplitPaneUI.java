@@ -50,7 +50,8 @@ public class BESplitPaneUI  extends BasicSplitPaneUI
      *
      * @return the basic split pane divider
      */
-    public BasicSplitPaneDivider createDefaultDivider() 
+    @Override
+    public BasicSplitPaneDivider createDefaultDivider()
     {
     	return new BESplitPaneDivider(this);
     }
